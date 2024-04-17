@@ -8,12 +8,11 @@ process fastqQC {
 	path(reads)
 
 	output:
-	path('fastq_report.html')
+	path('*.html')
 
 	script:
 	"""
 	fastqc $reads
-	mv *.html fastq_report.html
 	"""
 }
 
